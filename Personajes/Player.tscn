@@ -1,0 +1,76 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Personajes/Player.gd" type="Script" id=1]
+[ext_resource path="res://Destino Imagenes/Sonidos/pasos.wav" type="AudioStream" id=2]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Caminata_2.png" type="Texture" id=3]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Caminata_A2.png" type="Texture" id=4]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Rest.png" type="Texture" id=5]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Lado_5.png" type="Texture" id=6]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Empuje_2.png" type="Texture" id=7]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Caminata_3.png" type="Texture" id=8]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Empuje_1.png" type="Texture" id=9]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Lado_7.png" type="Texture" id=10]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Lado_6.png" type="Texture" id=11]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Lado_4.png" type="Texture" id=12]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Caminata_A -.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Abajo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Arrastrar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 13 ), ExtResource( 4 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Arriba",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Lado Der",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Lado Izq",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 64, 56 )
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 0, -32 )
+rotation = 3.14159
+collision_layer = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 13 )
+animation = "Frente"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.76837e-07, 0 )
+shape = SubResource( 14 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.1, 1.1 )
+
+[node name="Pasos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

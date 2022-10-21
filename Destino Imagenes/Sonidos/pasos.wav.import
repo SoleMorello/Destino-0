@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pasos.wav-aada39aba2f951472850406e064fb8f7.sample"
+
+[deps]
+
+source_file="res://Destino Imagenes/Sonidos/pasos.wav"
+dest_files=[ "res://.import/pasos.wav-aada39aba2f951472850406e064fb8f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

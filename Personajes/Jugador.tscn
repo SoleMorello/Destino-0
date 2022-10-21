@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Empuje_2.png" type="Texture" id=1]
+[ext_resource path="res://Personajes/Jugador.gd" type="Script" id=2]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Caminata_2.png" type="Texture" id=3]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Caminata_1.png" type="Texture" id=4]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Rest.png" type="Texture" id=5]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Caminata_3.png" type="Texture" id=6]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Empuje_1.png" type="Texture" id=7]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Lado_4.png" type="Texture" id=8]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje principal/Lado_5.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Camina",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "Empuje",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Lados",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 56, 36 )
+
+[node name="Jugador" type="KinematicBody2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Personaje" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Frente"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4 )
+shape = SubResource( 2 )

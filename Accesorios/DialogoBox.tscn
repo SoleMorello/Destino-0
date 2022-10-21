@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Destino Imagenes/Botones/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Accesorios/DialogBox.gd" type="Script" id=2]
+[ext_resource path="res://Destino Imagenes/PERSONAJES/Personaje secundarios/NIETA.png" type="Texture" id=3]
+[ext_resource path="res://Destino Imagenes/Botones/DIALOGO.png" type="Texture" id=4]
+[ext_resource path="res://Destino Imagenes/Botones/triangulito.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Esperando"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1069, 552 ), Vector2( 1069, 534 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1069, 552 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1213.0
+margin_top = 103.0
+margin_right = 1213.0
+margin_bottom = 103.0
+rect_scale = Vector2( 0.770343, 0.660572 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DialogBox" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -745.615
+margin_top = -530.406
+margin_right = -745.615
+margin_bottom = -530.406
+rect_scale = Vector2( 0.986213, 1.2209 )
+rect_pivot_offset = Vector2( -1575.96, -62.8404 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="DialogBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -892.775
+margin_top = -303.369
+margin_right = -999.775
+margin_bottom = -361.369
+rect_scale = Vector2( 13.2904, 12.3615 )
+color = Color( 0, 0, 0, 0.47451 )
+
+[node name="Abuelo" type="TextureRect" parent="DialogBox"]
+margin_left = -439.152
+margin_top = 99.21
+margin_right = 256.848
+margin_bottom = 953.21
+texture = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="DialogBox"]
+margin_left = 120.316
+margin_top = 266.385
+margin_right = 1164.32
+margin_bottom = 621.385
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+anchor_left = 0.092
+anchor_top = 0.135
+anchor_right = 0.092
+anchor_bottom = 0.135
+margin_left = 173.56
+margin_top = 300.7
+margin_right = 1080.56
+margin_bottom = 564.7
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+text = "Holaa comoo estas"
+
+[node name="Next" type="TextureRect" parent="DialogBox"]
+margin_left = 1069.0
+margin_top = 552.0
+margin_right = 1109.0
+margin_bottom = 592.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/Next"]
+autoplay = "Esperando"
+anims/Esperando = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="Tween" type="Tween" parent="DialogBox"]
+
+[connection signal="tween_completed" from="DialogBox/Tween" to="DialogBox" method="_on_Tween_tween_completed"]

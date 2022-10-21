@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/protagonista.wav-8b34c45462bed20b851960d9cf46d074.sample"
+
+[deps]
+
+source_file="res://Destino Imagenes/Sonidos/protagonista.wav"
+dest_files=[ "res://.import/protagonista.wav-8b34c45462bed20b851960d9cf46d074.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

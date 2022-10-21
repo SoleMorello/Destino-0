@@ -1,0 +1,283 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Personajes/Player2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Destino Imagenes/Sonidos/ambiente.wav" type="AudioStream" id=2]
+[ext_resource path="res://Destino Imagenes/Consepto/BG_LVL1.png" type="Texture" id=3]
+[ext_resource path="res://Destino Imagenes/Consepto/Bg_Lvl1_parte3.jpg" type="Texture" id=4]
+[ext_resource path="res://Esenas/Entrada4.gd" type="Script" id=5]
+[ext_resource path="res://Accesorios/Diario.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Accesorios/Playbox2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Accesorios/Box.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Accesorios/Playbox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Personajes/Nena.tscn" type="PackedScene" id=10]
+
+[sub_resource type="TileSet" id=1]
+0/name = "BG_LVL1.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 240, 112, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "BG_LVL1.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 224, 96, 32, 32 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "BG_LVL1.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 240, 80, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "BG_LVL1.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 160, 80, 48, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "BG_LVL1.png 3"
+3/texture = ExtResource( 3 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 304, 80, 48, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "BG_LVL1.png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 160, 144, 48, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "BG_LVL1.png 5"
+5/texture = ExtResource( 3 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 304, 144, 48, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "BG_LVL1.png 6"
+6/texture = ExtResource( 3 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 240, 144, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1060, 24.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 1060, 25 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 36, 244 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 44, 288 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 37, 102 )
+
+[node name="Subte 2" type="Node2D"]
+position = Vector2( 1160, 520 )
+
+[node name="Vagon" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" type="Sprite" parent="Vagon"]
+position = Vector2( 9.56928, 75.5 )
+scale = Vector2( 1.32635, 1.32635 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="Vagon"]
+scale = Vector2( 11, 11 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1966084, 0, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Paredes" type="TileMap" parent="Vagon"]
+scale = Vector2( 10, 10 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Vagon/Paredes"]
+scale = Vector2( 0.1, 0.1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vagon/Paredes/StaticBody2D"]
+position = Vector2( 4.00012, 175.5 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Vagon/Paredes/StaticBody2D"]
+position = Vector2( 4, -367 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Vagon/Paredes/StaticBody2D"]
+position = Vector2( 1036, -100 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Vagon/Paredes/StaticBody2D"]
+position = Vector2( -1048, -96 )
+shape = SubResource( 6 )
+
+[node name="Cajas movi" type="Node2D" parent="Vagon"]
+
+[node name="Cajas Quietas" type="Node2D" parent="Vagon"]
+
+[node name="Node2D" type="Node2D" parent="Vagon/Cajas Quietas"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -780, -100 )
+
+[node name="Sonido" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sonido"]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Entrada V2" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrada V2"]
+position = Vector2( -978, -94 )
+shape = SubResource( 7 )
+
+[node name="Cajas" type="Node2D" parent="."]
+
+[node name="Box" parent="Cajas" instance=ExtResource( 8 )]
+position = Vector2( -542, -279 )
+
+[node name="Box2" parent="Cajas" instance=ExtResource( 8 )]
+position = Vector2( -394, -281 )
+
+[node name="Box4" parent="Cajas" instance=ExtResource( 8 )]
+position = Vector2( 629, 24 )
+
+[node name="Box5" parent="Cajas" instance=ExtResource( 8 )]
+position = Vector2( 629, -95 )
+
+[node name="Box6" parent="Cajas" instance=ExtResource( 8 )]
+position = Vector2( -543, -135 )
+
+[node name="Box3" parent="Cajas" instance=ExtResource( 8 )]
+position = Vector2( 200, -280 )
+
+[node name="Diario" type="Node2D" parent="."]
+
+[node name="Diario" parent="Diario" instance=ExtResource( 6 )]
+position = Vector2( 65, 22 )
+
+[node name="Diario2" parent="Diario" instance=ExtResource( 6 )]
+position = Vector2( 195, 21 )
+
+[node name="Diario3" parent="Diario" instance=ExtResource( 6 )]
+position = Vector2( -837, 65 )
+
+[node name="Movible" type="Node2D" parent="."]
+
+[node name="PlayBOX" parent="Movible" instance=ExtResource( 9 )]
+position = Vector2( -273, -116 )
+
+[node name="PlayBOX2" parent="Movible" instance=ExtResource( 9 )]
+position = Vector2( 191, -111 )
+
+[node name="PlayBOX3" parent="Movible" instance=ExtResource( 9 )]
+position = Vector2( -273, 3 )
+
+[node name="PlayBOX4" parent="Movible" instance=ExtResource( 7 )]
+position = Vector2( 631, -248 )
+
+[node name="Nena" parent="." instance=ExtResource( 10 )]
+position = Vector2( 846, 36 )
+
+[connection signal="body_entered" from="Entrada V2" to="Entrada V2" method="_on_Entrada_V2_body_entered"]
